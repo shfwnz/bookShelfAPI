@@ -1,21 +1,14 @@
 {
   "name": "bookshelfapi",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shfwnz/bookShelfAPI.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/shfwnz/bookShelfAPI/issues"
-  },
-  "homepage": "https://github.com/shfwnz/bookShelfAPI#readme"
+  "devDependencies": {
+    "vite": "^6.2.0"
+  }
 }
