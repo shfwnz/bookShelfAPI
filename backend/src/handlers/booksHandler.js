@@ -1,5 +1,5 @@
 const { nanoid } = require('nanoid');
-const books = [];
+const books = require('../models/books');
 
 const addBookHandler = (request, h) => {
   const {
