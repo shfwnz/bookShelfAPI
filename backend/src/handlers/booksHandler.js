@@ -54,13 +54,25 @@ const addBookHandler = (request, h) => {
 
   books.push(newBook);
 
-  return h
-    .response({
+  const isSuccess = books.filter((book) => book.id === id).length > 0;
+
+  if (isSuccess) {
+    const response = h.response({
       status: 'success',
       message: 'Buku berhasil ditambahkan',
       data: { bookId: id },
-    })
-    .code(201);
+    });
+    response.code(201);
+    return response;
+  }
+
+  const response = h.response({
+    status: 'fail',
+    message: 'Gagal menambahkan buku',
+  });
+
+  response.code(500);
+  return response;
 };
 
 const getAllBooksHandler = (request, h) => {
@@ -113,10 +125,12 @@ const getBookByIdHandler = (request, h) => {
       .code(404);
   }
 
-  return {
-    status: 'success',
-    data: { book },
-  };
+  return h
+    .response({
+      status: 'success',
+      data: { book },
+    })
+    .code(200);
 };
 
 const updateBookHandler = (request, h) => {
