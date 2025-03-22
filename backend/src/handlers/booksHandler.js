@@ -174,3 +174,11 @@ const deleteBookHandler = (request, h) => {
     })
     .code(200);
 };
+
+export {
+  addBookHandler,
+  getAllBooksHandler,
+  getBookByIdHandler,
+  updateBookHandler,
+  deleteBookHandler,
+};
