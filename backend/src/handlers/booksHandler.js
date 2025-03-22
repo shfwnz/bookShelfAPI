@@ -175,7 +175,7 @@ const deleteBookHandler = (request, h) => {
     .code(200);
 };
 
-export {
+module.exports = {
   addBookHandler,
   getAllBooksHandler,
   getBookByIdHandler,
