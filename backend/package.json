@@ -1,7 +1,7 @@
 {
   "name": "backend_bookshelf",
   "version": "1.0.0",
-  "main": "sercer.js",
+  "main": "src/server.js",
   "type": "commonjs",
   "dependencies": {
     "@hapi/hapi": "^21.4.0",
